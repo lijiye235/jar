@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服务器官网</title>
+<style>
+  :root{
+    --bg:#0f1115;
+    --card:#181c24;
+    --card2:#1f2430;
+    --line:#2a3040;
+    --txt:#e6e8ee;
+    --sub:#9aa4b2;
+    --accent:#4fd1c5;
+    --accent2:#7c9cff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--txt);
+    font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+
+  /* 顶部导航 */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,17,21,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .inner{max-width:900px;margin:0 auto;padding:12px 20px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  nav .brand{font-weight:700;color:var(--accent);margin-right:auto}
+  nav a{color:var(--sub);font-size:14px}
+  nav a:hover{color:var(--txt);text-decoration:none}
+
+  /* Hero */
+  .hero{
+    padding:70px 20px 60px;text-align:center;
+    background:radial-gradient(1200px 400px at 50% -100px,rgba(79,209,197,.18),transparent 70%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:1px}
+  .hero .tag{color:var(--sub);margin-top:12px;font-size:16px}
+  .hero .ip-box{
+    margin-top:26px;display:inline-block;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 22px;font-family:monospace;font-size:18px;color:var(--accent)
+  }
+  .hero .ip-box span{color:var(--sub);font-size:13px;display:block;margin-bottom:4px}
+
+  section{margin-top:52px}
+  section > h2{
+    font-size:24px;font-weight:800;margin-bottom:18px;
+    padding-left:12px;border-left:4px solid var(--accent)
+  }
+
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px;margin-bottom:16px
+  }
+  .card h3{font-size:18px;margin-bottom:10px;color:var(--accent2)}
+  .card p{color:#cdd5e0}
+  .card ul{padding-left:20px}
+  .card li{margin-bottom:6px;color:#cdd5e0}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .mini{
+    background:var(--card2);border:1px solid var(--line);border-radius:12px;
+    padding:16px
+  }
+  .mini .k{color:var(--sub);font-size:13px}
+  .mini .v{font-size:18px;font-weight:700;margin-top:4px;font-family:monospace;color:var(--accent)}
+
+  .rule-list{list-style:none;padding:0}
+  .rule-list li{
+    padding:10px 14px;border-bottom:1px dashed var(--line);color:#cdd5e0
+  }
+  .rule-list li:last-child{border-bottom:none}
+
+  .faq .item{margin-bottom:16px}
+  .faq .q{font-weight:700;color:var(--accent2);margin-bottom:4px}
+  .faq .a{color:#cdd5e0;padding-left:4px}
+  .faq code{
+    background:var(--card2);padding:2px 8px;border-radius:6px;
+    font-family:monospace;color:var(--accent);font-size:14px
+  }
+
+  .log{list-style:none;padding:0}
+  .log li{
+    padding:10px 14px;border-left:3px solid var(--accent2);
+    background:var(--card2);margin-bottom:10px;border-radius:0 8px 8px 0
+  }
+  .log .date{color:var(--accent);font-size:13px;font-family:monospace}
+
+  .ban-note{color:var(--sub);font-size:14px;margin-bottom:12px}
+  .ban-count{
+    margin-top:14px;font-size:15px;color:var(--accent);font-weight:700
+  }
+
+  footer{
+    margin-top:70px;padding-top:24px;border-top:1px solid var(--line);
+    text-align:center;color:var(--sub);font-size:13px
+  }
+
+  @media(max-width:600px){
+    .hero h1{font-size:30px}
+    .hero .ip-box{font-size:15px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <span class="brand">我的世界服务器</span>
+    <a href="#intro">简介</a>
+    <a href="#feature">特色</a>
+    <a href="#info">信息</a>
+    <a href="#owner">服主</a>
+    <a href="#donate">赞助</a>
+    <a href="#rules">规则</a>
+    <a href="#faq">FAQ</a>
+    <a href="#ban">黑名单</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>欢迎来到服务器</h1>
+  <div class="tag">Java & 基岩双端互通 · 原版生存 · 公平友好</div>
+  <div class="ip-box">
+    <span>服务器地址</span>
+    Java：9666.uno:31923 ／ 基岩：9666.uno+31924
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- 第 2 块：服务器简介 -->
+  <section id="intro">
+    <h2>服务器简介</h2>
+    <div class="card">
+      <p>这是一个面向所有玩家的原版生存服务器，支持 Java 版与基岩版双端互通。我们以友好的社区氛围、稳定的运行环境为目标，欢迎每一位喜欢 Minecraft 的朋友加入，一起建造属于自己的世界。</p>
+    </div>
+  </section>
+
+  <!-- 第 3 块：服务器特色 -->
+  <section id="feature">
+    <h2>服务器特色</h2>
+    <div class="grid">
+      <div class="mini"><div class="k">双端互通</div><div class="v">Java + 基岩</div></div>
+      <div class="mini"><div class="k">游戏模式</div><div class="v">原版生存</div></div>
+      <div class="mini"><div class="k">领地系统</div><div class="v">保护你的家</div></div>
+      <div class="mini"><div class="k">经济商店</div><div class="v">自由交易</div></div>
+    </div>
+  </section>
+
+  <!-- 第 4 块：服务器信息 -->
+  <section id="info">
+    <h2>服务器信息</h2>
+    <div class="grid">
+      <div class="mini"><div class="k">Java 版 IP</div><div class="v">9666.uno:31923</div></div>
+      <div class="mini"><div class="k">基岩版</div><div class="v">9666.uno+31924</div></div>
+      <div class="mini"><div class="k">版本</div><div class="v">1.21.10</div></div>
+      <div class="mini"><div class="k">QQ 群</div><div class="v">228988334</div></div>
+    </div>
+  </section>
+
+  <!-- 第 5 块：服主信息 -->
+  <section id="owner">
+    <h2>服主信息</h2>
+    <div class="card">
+      <ul>
+        <li>服主：醉山之白喵~</li>
+        <li>QQ：3492854988</li>
+        <li>邮箱：validate2026@163.com</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 6 块：赞助 / 捐赠 -->
+  <section id="donate">
+    <h2>赞助 / 捐赠</h2>
+    <div class="card" style="text-align: center;">
+      <p>如果你喜欢这个服务器，欢迎通过赞助支持我们，每一份支持都是我们前进的动力。</p>
+      <div style="margin-top: 20px;">
+        <!-- 微信赞赏码图片（使用 jsDelivr 加速链接） -->
+        <img src="https://cdn.jsdelivr.net/gh/lijiye235/jar@main/mm_reward_qrcode_1789299117727.png" 
+             alt="微信赞赏码" 
+             style="width: 220px; max-width: 80%; border-radius: 12px; border: 2px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+      </div>
+      <p style="margin-top: 12px; color: var(--sub); font-size: 14px;">扫码即可赞助，感谢支持！</p>
+    </div>
+  </section>
+
+  <!-- 第 7 块：服务器规则 -->
+  <section id="rules">
+    <h2>服务器规则</h2>
+    <div class="card">
+      <ul class="rule-list">
+        <li>禁止在游戏内开挂</li>
+        <li>禁止在服务器内随便拆别人家</li>
+        <li>禁止破坏服务器的地形</li>
+        <li>禁止崩服</li>
+        <li>禁止建造大型生电机器</li>
+        <li>禁止在服务器内随意发送辱骂他人的话语</li>
+        <li>禁止在服务器非竞技场内进行 PVP</li>
+        <li>禁止偷他人物品</li>
+        <li>禁止随意杀人</li>
+        <li>基岩版推荐优先使用 1.21.10 版本，其他版本不确定是否可以进入</li>
+        <li>商店禁止出现恶意抬高物价或其他卡 bug 刷钱等行为，一经发现立即清空其玩家个人账户，如是团队则清空其团队所有个人账户</li>
+        <li>领地圈地行为出现了纠纷，请优先双方进行自我沟通，如果实在无法解决，请找服主</li>
+        <li>别用任何方式卡 bug、穿墙、卡领地边界</li>
+        <li>广告、拉人、引流链接直接封</li>
+        <li>服主会根据服务器内实际情况随时改动服务器规则，改动时会发送公告通知所有玩家（仅通过官网和服务器群聊发布，游戏内不会另行告知）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 8 块：常见问题 / 更新日志 -->
+  <section id="faq">
+    <h2>常见问题</h2>
+    <div class="card faq">
+      <div class="item"><div class="q">Q：进不去服务器怎么办？</div><div class="a">A：请先确认版本，Java 版填 <code>9666.uno:31923</code>，基岩版填 <code>9666.uno+31924</code>。还是连接不上，去 QQ 群向群友或服主提问。</div></div>
+      <div class="item"><div class="q">Q：怎么圈地？</div><div class="a">A：请在游戏内自我查看或请教其他服务器老玩家。</div></div>
+      <div class="item"><div class="q">Q：怎么开商店？</div><div class="a">A：商店系统可在游戏内自行设置，具体玩法进服摸索或群里问。</div></div>
+      <div class="item"><div class="q">Q：是否有死亡不掉落？</div><div class="a">A：原版生存，有死亡不掉落。</div></div>
+      <div class="item"><div class="q">Q：能在竞技场外 PVP 吗？</div><div class="a">A：不行，请在竞技场内进行 PVP，竞技场外禁止。</div></div>
+      <div class="item"><div class="q">Q：服主不在怎么办？</div><div class="a">A：可以去 QQ 群内私信或在群内艾特服主。</div></div>
+    </div>
+
+    <h2 style="margin-top:44px">更新日志</h2>
+    <div class="card">
+      <ul class="log">
+        <li><span class="date">2026年9月1日</span><br>服务器加入 TPA 插件</li>
+        <li><span class="date">2026年9月2日</span><br>服务器加入 TAB 插件</li>
+        <li><span class="date">2026年9月3日</span><br>服务器正式开启</li>
+        <li><span class="date">2026年9月12日</span><br>服务器新增领地、经济、商店三大插件</li>
+        <li><span class="date">2026年9月13日</span><br>服务器增加官网</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 9 块：黑名单 -->
+  <section id="ban">
+    <h2>黑名单</h2>
+    <div class="card">
+      <p class="ban-note">以下为被永久封禁的玩家名单，持续更新。</p>
+      <p>（暂无）</p>
+      <div class="ban-count">封禁人数：0</div>
+    </div>
+  </section>
+
+  <footer>
+    服务器官网 · 由服主独自维护 · 最终解释权归服主所有<br>
+    © 2026 我的世界服务器
+  </footer>
+
+</div>
+</body>
+</html>
